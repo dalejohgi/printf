@@ -20,7 +20,7 @@ typedef struct functions
 } prin;
 int _printf(const char *format, ...);
 int _putchar(char c);
-void _char(void);
-void _str(void);
-void print_number(void);
+void _char();
+void _str();
+void print_number();
 #endif
