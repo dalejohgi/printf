@@ -3,18 +3,12 @@
  *_printf - Print acording to the format
  *@format: pointer to a string
  *Return: Zero if success
- *
- *
  */
 int _printf(const char * const format, ...)
 {
-	int i = 0, j = 0;
-	prin selec[] = {
-		{"c", _char}, {"d", print_numd},
-		{"s", _str}, {"u", print_unsigned},
-		{"i", print_number},
-		{NULL, NULL}
-		};
+	int i = 0, j = 0, r = 0;
+	prin selec[] = { {"c", _char}, {"s", _str}, {"i", print_number},
+		{"d", print_numd}, {"u", print_unsigned}, {NULL, NULL} };
 	va_list selector;
 
 	va_start(selector, format);
@@ -29,7 +23,7 @@ int _printf(const char * const format, ...)
 			{
 				if (selec[j].lf[0] == format[i + 1])
 				{
-					selec[j].f(selector);
+					r = r + selec[j].f(selector);
 					i++;
 					break;
 				}
@@ -37,13 +31,18 @@ int _printf(const char * const format, ...)
 					j++;
 			}
 			if (selec[j].lf == NULL)
+			{
 				putchar(format[i]);
+				r++;
+			}
 		}
 		else
 		{
 			putchar(format[i]);
+			r++;
 		}
 	i++;
 	}
-return (0);
+	va_end(selector);
+	return (r);
 }

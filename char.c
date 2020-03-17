@@ -2,13 +2,14 @@
 /**
  *_char - Funtion to print a char
  *@selector: List of arguments valist
- *
+ *Return: Number of bytes printed
  *
  */
-void _char(va_list selector)
+int _char(va_list selector)
 {
 	char k = va_arg(selector, int);
 
 	putchar(k);
+return (1);
 }
 
