@@ -10,8 +10,8 @@ int _printf(const char * const format, ...)
 {
 	int i = 0, j = 0;
 	prin selec[] = {
-		{"c", _char},
-		{"s", _str},
+		{"c", _char}, {"d", print_numd},
+		{"s", _str}, {"u", print_unsigned},
 		{"i", print_number},
 		{NULL, NULL}
 		};
@@ -20,6 +20,8 @@ int _printf(const char * const format, ...)
 	va_start(selector, format);
 	while (format && format[i] != '\0')
 	{
+		if (format[i] == '%' && format[i + 1] == '%')
+			i++;
 		if (format[i] == '%')
 		{
 			j = 0;
@@ -35,11 +37,11 @@ int _printf(const char * const format, ...)
 					j++;
 			}
 			if (selec[j].lf == NULL)
-				_putchar(format[i]);
+				putchar(format[i]);
 		}
 		else
 		{
-			_putchar(format[i]);
+			putchar(format[i]);
 		}
 	i++;
 	}

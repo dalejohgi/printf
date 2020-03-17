@@ -12,7 +12,7 @@ void _str(va_list selector)
 	string = va_arg(selector, char *);
 	while (string[i] != '\0')
 	{
-		_putchar(string[i]);
+		putchar(string[i]);
 		i++;
 	}
 }
