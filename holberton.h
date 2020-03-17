@@ -16,7 +16,7 @@
 typedef struct functions
 {
 	char *lf;
-	void (*f)(void *);
+	int (*f)(void *);
 } prin;
 int _printf(const char *format, ...);
 int print_numd();
