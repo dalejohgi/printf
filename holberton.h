@@ -16,12 +16,12 @@
 typedef struct functions
 {
 	char *lf;
-	void (*f)(void *);
+	int (*f)(va_list selector);
 } prin;
 int _printf(const char *format, ...);
-int print_numd();
-int _char();
-int _str();
-int print_number();
-int print_unsigned();
+int print_numd(va_list selector);
+int _char(va_list selector);
+int _str(va_list selector);
+int print_number(va_list selector);
+int print_unsigned(va_list selector);
 #endif
