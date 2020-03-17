@@ -6,8 +6,9 @@
 /**
  *print_number - print a number whit putchar.
  *@selector: is a integer.
+ *Return: 0.
  */
-void print_number(va_list selector)
+int print_number(va_list selector)
 {
 	int i, d, k = 1, p = 1, j, larg, flag, n;
 
@@ -46,12 +47,14 @@ void print_number(va_list selector)
 	{
 		putchar('8');
 	}
+	return (0);
 }
 /**
  *print_numd - print a number whit putchar.
  *@selector: is a integer.
- */
-void print_numd(va_list selector)
+ *Return: 0
+*/
+int print_numd(va_list selector)
 {
 	int i, d, k = 1, p = 1, j, larg, flag, n;
 
@@ -90,13 +93,15 @@ void print_numd(va_list selector)
 	{
 		putchar('8');
 	}
+	return (0);
 }
 
 /**
  *print_unsigned - print a number whit putchar.
  *@selector: is a integer.
+ *Return: 0.
  */
-void print_unsigned(va_list selector)
+int print_unsigned(va_list selector)
 {
 	int i, d, k = 1, p = 1, j, larg;
 	unsigned int n;
@@ -123,4 +128,5 @@ void print_unsigned(va_list selector)
 		n = n - p * d;
 		p = 1;
 	}
+	return (0);
 }

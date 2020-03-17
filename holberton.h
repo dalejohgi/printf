@@ -19,9 +19,9 @@ typedef struct functions
 	void (*f)(void *);
 } prin;
 int _printf(const char *format, ...);
-void print_numd();
-void _char();
-void _str();
-void print_number();
-void print_unsigned();
+int print_numd();
+int _char();
+int _str();
+int print_number();
+int print_unsigned();
 #endif
