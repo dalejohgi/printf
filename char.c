@@ -9,6 +9,6 @@ void _char(va_list selector)
 {
 	char k = va_arg(selector, int);
 
-	_putchar(k);
+	putchar(k);
 }
 
