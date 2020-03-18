@@ -20,7 +20,6 @@ int _str(va_list selector)
 			i++;
 			j++;
 		}
-		putchar('\0');
 		return (j);
 	}
 }
