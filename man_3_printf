@@ -105,9 +105,17 @@ before the end of the array is reached.
 .SH    	       %     A '%' is written.  No argument is converted.  The complete conversion specification is '%%'.
 
 .SH EXAMPLE
+.PPchar author = ["Pablo Picasso"];
+input: _printf("Learn the rules like a pro, so you can break them like an artist. -%s", author);
+output: Learn the rules like a pro, so you can break them like an artist. -Pablo Picasso
 
-
+.PP int n = 4;
+input: _printf("I have %i duaghters", n);
+output: I have 4 daughters
 .SH SEE ALSO
        printf(1)
+.SH NOTES
+The information of this page take for the man page of 3.54 of the Linux man-pages project at http://www.kernel.org/doc/man-pages
 .SH COLOPHON
 This page is part of _printf proyect for Holberton School in the process of formation.
+.SH AUTHOR David Alejandro Hincapié and Rene Mauricio Olarte for Holberton School.
