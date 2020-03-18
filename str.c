@@ -12,11 +12,15 @@ int _str(va_list selector)
 	string = va_arg(selector, char *);
 	if (string == NULL)
 		return (-1);
-	while (string[i] != '\0')
+	else
 	{
-		putchar(string[i]);
-		i++;
-		j++;
+		while (string[i] != '\0')
+		{
+			putchar(string[i]);
+			i++;
+			j++;
+		}
+		putchar('\0');
+		return (j);
 	}
-return (j);
 }
