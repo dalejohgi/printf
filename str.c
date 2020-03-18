@@ -11,7 +11,7 @@ int _str(va_list selector)
 
 	string = va_arg(selector, char *);
 	if (string == NULL)
-		return (0);
+		return (-1);
 	while (string[i] != '\0')
 	{
 		putchar(string[i]);
