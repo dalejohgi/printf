@@ -7,11 +7,19 @@
 int _str(va_list selector)
 {
 	char *string;
-	int i = 0, j = 0;
+	char null[] = "(null)";
+	int i = 0, j = 0, n = 0;
 
 	string = va_arg(selector, char *);
 	if (string == NULL)
+	{
+		while (null[n] != '\0')
+		{
+			putchar(null[n]);
+			n++;
+		}
 		return (-1);
+	}
 	else
 	{
 		while (string[i] != '\0')
